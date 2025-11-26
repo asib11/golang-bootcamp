@@ -2,9 +2,11 @@ package main
 
 import "fmt"
 
-func add(num1 int, num2 int) {
+func add(num1 int, num2 int) (int, int) {
 	sum := num1 + num2
-	fmt.Println( "Sum is:", sum)
+	mul := num1 * num2
+	
+	return sum, mul
 }
 
 func main() {
@@ -17,5 +19,7 @@ func main() {
 	fmt.Print("enter number b: ")
 	fmt.Scan(&b)
 
-	add(a, b)
+	p, q := add(a, b)
+	fmt.Println("Sum is:", p)
+	fmt.Println("Product is:", q)
 }
