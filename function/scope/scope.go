@@ -18,8 +18,8 @@ func main() {
 	fmt.Println(add(p, q))
 	fmt.Println(add(a, b))
 
-	if p <= 40 {
-		var r int = 100
+	if p <= 40 { //block scope
+		var r int = 100 //r is only accessible within this if block
 		fmt.Println("Value of r is:", r)
 	}
 
