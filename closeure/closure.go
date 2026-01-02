@@ -35,3 +35,19 @@ func main() {
 func init() {
 	fmt.Println("Init function called")
 }
+
+
+// Output:// Init function called
+// Age in outer: 30
+// 310
+// 410
+// Age in outer: 30
+// 310
+// 410
+
+// Explanation:
+// The code demonstrates the concept of closures in Go. The `outer` function defines local variables `money` and `age`, and returns an inner function `show` that modifies and prints the `money` variable. Each time `outer` is called, a new instance of `money` is created, allowing separate state for each closure. The `call` function invokes `outer` twice, creating two independent closures that maintain their own state for `money`. The `init` function is executed before `main`, printing a message when the program starts.	
+
+// The code demonstrates the concept of closures in Go. The `outer` function defines local variables `money` and `age`, and returns an inner function `show` that modifies and prints the `money` variable. Each time `outer` is called, a new instance of `money` is created, allowing separate state for each closure. The `call` function invokes `outer` twice, creating two independent closures that maintain their own state for `money`. The `init` function is executed before `main`, printing a message when the program starts.
+
+//escape analysis: money escapes to heap
