@@ -41,6 +41,20 @@ func main() {
 	fmt.Println(cap(s3))
 	s3[1] = 100
 	fmt.Println(s3)
+
+	// 6. empty slice or nil slice
+	var s4 []int
+	fmt.Println(s4)
+	fmt.Println(len(s4))
+	fmt.Println(cap(s4))
+
+	var s5 []int
+
+	s5 = append(s5, 10)
+	s5 = append(s5, 20)
+	fmt.Println(s5)
+	fmt.Println(len(s5))
+	fmt.Println(cap(s5))
 	
 }
 
@@ -55,6 +69,8 @@ func main() {
 * 3. slice from a slice
 * 4. function slice (make function)
 * 5. make function with len and cap
+* 6. empty slice or nil slice
+* 7. slcie underlying array rule => 1024 -> 100% or doble the capacity increase, 1024 < increase by 25%
 
 OUTPUT:
 [this is a very simple array]
