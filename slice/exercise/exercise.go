@@ -17,4 +17,6 @@ func main() {
 
 	fmt.Println("x:", x) // x: [1 2 3 4 10 6 7]
 	fmt.Println("y:", y) // y: [10 6 7 11]
+
+	fmt.Println(x[0:8]) //[1 2 3 4 10 6 7 11] though len(x)=7, cap(x)=10 or fmt.Println(x[:8]) 
 }
