@@ -26,5 +26,5 @@ func calculate() (result int) {
 
 func main() {
 	a := calculate()
-	fmt.Println("main", a)
+	fmt.Println("main : ", a)
 }
